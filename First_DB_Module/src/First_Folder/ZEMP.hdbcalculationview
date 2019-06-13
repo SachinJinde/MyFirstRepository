@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="NingyakbekAdu.First_DB_Module.First_Folder::ZEMP" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Employee"/>
+<localVariables>
+  <variable id="Tax" parameter="true">
+    <descriptions defaultDescription="TaxPercentage"/>
+    <variableProperties datatype="DECIMAL" length="3" scale="2" mandatory="false">
+      <valueDomain type="empty"/>
+      <selection multiLine="false" type="Single"/>
+    </variableProperties>
+  </variable>
+  <variable id="EMP_NO">
+    <descriptions defaultDescription="EMP_NO"/>
+    <variableProperties datatype="NVARCHAR" length="10" scale="null" defaultValue="">
+      <valueDomain type="AttributeValue">
+        <externalLikeStructureName>NingyakbekAdu.First_DB_Module.First_Folder::ZEMP</externalLikeStructureName>
+        <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+        <externalLikeElementName>EmpNo</externalLikeElementName>
+      </valueDomain>
+      <selection type="SingleValue"/>
+    </variableProperties>
+  </variable>
+</localVariables>
+<variableMappings/>
+<dataSources>
+  <DataSource id="NingyakbekAdu.First_DB_Module.First_Folder::Emp">
+    <resourceUri>NingyakbekAdu.First_DB_Module.First_Folder::Emp</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="EmpNo">
+        <descriptions defaultDescription="EmpNo"/>
+      </viewAttribute>
+      <viewAttribute id="EmpName">
+        <descriptions defaultDescription="EmpName"/>
+      </viewAttribute>
+      <viewAttribute id="Sex">
+        <descriptions defaultDescription="Sex"/>
+      </viewAttribute>
+      <viewAttribute id="StartDate">
+        <descriptions defaultDescription="StartDate"/>
+      </viewAttribute>
+      <viewAttribute id="EndDate">
+        <descriptions defaultDescription="EndDate"/>
+      </viewAttribute>
+      <viewAttribute id="Salary">
+        <descriptions defaultDescription="Salary"/>
+      </viewAttribute>
+      <viewAttribute id="Currency">
+        <descriptions defaultDescription="Currency"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="NingyakbekAdu.First_DB_Module.First_Folder::Emp">
+      <mapping xsi:type="Calculation:AttributeMapping" target="EmpNo" source="EmpNo"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EmpName" source="EmpName"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sex" source="Sex"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="StartDate" source="StartDate"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EndDate" source="EndDate"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Salary" source="Salary"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Currency" source="Currency"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="EmpNo" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EmpNo"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EmpNo"/>
+    </attribute>
+    <attribute id="EmpName" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EmpName"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EmpName"/>
+    </attribute>
+    <attribute id="Sex" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sex"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Sex"/>
+    </attribute>
+    <attribute id="StartDate" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="StartDate"/>
+      <keyMapping columnObjectName="Projection_1" columnName="StartDate"/>
+    </attribute>
+    <attribute id="EndDate" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EndDate"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EndDate"/>
+    </attribute>
+    <attribute id="Currency" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Currency"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Salary" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Salary"/>
+      <measureMapping columnObjectName="Projection_1" columnName="Salary"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

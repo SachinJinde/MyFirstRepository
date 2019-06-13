@@ -1,0 +1,12 @@
+{
+  "role": {
+    "name": "NingyakbekAdu.First_DB_Module.Roles::ReadAccess",
+    "object_privileges": [
+      {
+        "name": "NingyakbekAdu.First_DB_Module.First_Folder::Emp",
+        "type": "TABLE",
+        "privileges": [ "SELECT" ]
+      }
+    ]
+  }
+}

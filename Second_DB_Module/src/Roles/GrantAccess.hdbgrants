@@ -1,0 +1,11 @@
+{
+	"STUDENT04-7x53izx1mdmq62pb-NingyakbekAdu-hdi_First_DB_Module": {
+		
+			"application_user": {
+			"container_roles": [
+				"NingyakbekAdu.First_DB_Module.Roles::ReadAccess"
+			]
+		}
+	
+	}
+}

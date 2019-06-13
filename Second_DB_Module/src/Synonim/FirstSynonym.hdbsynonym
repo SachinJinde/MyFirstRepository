@@ -1,0 +1,9 @@
+{
+  "NingyakbekAdu.Second_DB_Module.Synonim::Synonym_0": {
+    "target": {
+      "object": "NingyakbekAdu.First_DB_Module.First_Folder::Emp",
+      "schema": "NINGYAKBEKADU_HDI_FIRST_DB_MODULE_1",
+      "database": "H00"
+    }
+  }
+}

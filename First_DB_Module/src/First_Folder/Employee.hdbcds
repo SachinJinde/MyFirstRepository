@@ -1,0 +1,12 @@
+namespace NingyakbekAdu.First_DB_Module.First_Folder;
+
+Entity Emp
+{
+EmpNo : String(10);
+EmpName : String(20);
+Sex : String(1);
+StartDate : LocalDate;
+EndDate : LocalDate;
+Salary : Decimal(17,3);
+Currency : String(5);
+}
