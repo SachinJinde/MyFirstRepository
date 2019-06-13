@@ -9,4 +9,5 @@ StartDate : LocalDate;
 EndDate : LocalDate;
 Salary : Decimal(17,3);
 Currency : String(5);
+test : String(5);
 }
